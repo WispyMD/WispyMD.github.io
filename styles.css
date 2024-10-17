@@ -1,12 +1,12 @@
 body
 {
-    background-color: aliceblue;
+    background-color: rgb(89, 176, 253);
 }
 h1
 {
-    color:bisque
+    color:rgb(255, 140, 0)
 }
 p
 {
-    color:burlywood
+    color:rgb(0, 0, 0)
 }
