@@ -13,4 +13,8 @@ p
 .button1
 {
     background-color: cadetblue;
+    border-radius: 50%;
+    height: fit-content;
+    width: fit-content;
+    stroke-width: 3%;
 }
