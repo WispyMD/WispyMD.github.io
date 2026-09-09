@@ -1,20 +1,274 @@
-body
-{
-    background-color: rgb(89, 176, 253);
+:root {
+  --bg: #f4f6f8;
+  --panel: #ffffff;
+  --panel-soft: #eef3f7;
+  --text: #1e2a36;
+  --muted: #5b6977;
+  --line: #dfe7ee;
+  --accent: #1f5f8b;
+  --accent-soft: #eaf3fb;
+  --shadow: rgba(17, 24, 39, 0.08);
 }
-h1
-{
-    color:rgb(255, 140, 0)
+
+* {
+  box-sizing: border-box;
 }
-p
-{
-    color:rgb(0, 0, 0)
+
+html {
+  scroll-behavior: smooth;
 }
-.button1
-{
-    background-color: cadetblue;
-    border-radius: 50%;
-    height: fit-content;
-    width: fit-content;
-    stroke-width: 3%;
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(180deg, #f8fafc 0%, #eef2f5 100%);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.page-shell {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 24px 64px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 16px;
+  padding: 16px 0 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+.eyebrow,
+.section-label {
+  margin: 0 0 8px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 3vw, 3.2rem);
+  line-height: 1.1;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.nav a:hover,
+.footer a:hover {
+  color: var(--accent);
+}
+
+main {
+  display: block;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid rgba(17, 24, 39, 0.04);
+  border-radius: 18px;
+  box-shadow: 0 14px 30px var(--shadow);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.6fr 0.9fr;
+  gap: 28px;
+  padding: 30px;
+  margin-top: 28px;
+}
+
+.hero-copy h2 {
+  margin-bottom: 16px;
+  font-size: clamp(1.8rem, 2vw, 2.5rem);
+  line-height: 1.2;
+}
+
+.hero-copy p:last-child {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 1.02rem;
+}
+
+.hero-meta {
+  background: var(--panel-soft);
+  border-radius: 14px;
+  padding: 22px;
+  border: 1px solid var(--line);
+}
+
+.hero-meta p {
+  margin: 0 0 14px;
+  color: var(--text);
+  font-size: 0.97rem;
+}
+
+.hero-meta p:last-child {
+  margin-bottom: 0;
+}
+
+.section-block {
+  margin-top: 42px;
+}
+
+.section-header {
+  margin-bottom: 18px;
+}
+
+.section-header h3 {
+  margin-bottom: 0;
+  font-size: clamp(1.4rem, 1.8vw, 2rem);
+}
+
+.job {
+  padding: 26px 24px;
+  margin-bottom: 20px;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: end;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 14px;
+  margin-bottom: 16px;
+}
+
+.job-header h4 {
+  margin-bottom: 4px;
+  font-size: 1.4rem;
+}
+
+.job-title {
+  margin: 0;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.job-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+.job ul,
+.project ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--text);
+}
+
+.job li,
+.project li {
+  margin-bottom: 10px;
+  padding-left: 6px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.project {
+  padding: 24px 22px;
+}
+
+.project h4 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.project p {
+  margin-bottom: 12px;
+  color: var(--muted);
+}
+
+.footer {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  color: var(--muted);
+}
+
+.footer a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+@media (max-width: 760px) {
+  .topbar,
+  .hero,
+  .job-header,
+  .footer {
+    grid-template-columns: 1fr;
+    display: block;
+  }
+
+  .topbar {
+    padding-bottom: 18px;
+  }
+
+  .nav {
+    margin-top: 14px;
+  }
+
+  .hero,
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 22px 18px;
+  }
+
+  .job,
+  .project {
+    padding: 20px 18px;
+  }
+
+  .job-meta {
+    align-items: flex-start;
+    text-align: left;
+    margin-top: 12px;
+  }
 }

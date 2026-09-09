@@ -1,12 +1,137 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <script type="text/javascript" src="main.actions.js"></script>
-    <link rel = "stylesheet" href="styles.css">
-</head>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages. Isnt this so exciting :|</p>
-<button onclick="letMeCallYou()" class= "button button1">Click Me!</button>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Professional Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Portfolio</p>
+          <h1>Your Name</h1>
+        </div>
+        <nav class="nav">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+
+      <main>
+        <section id="about" class="hero card">
+          <div class="hero-copy">
+            <p class="section-label">Professional Summary</p>
+            <h2>Results-driven professional focused on solving meaningful business problems.</h2>
+            <p>
+              I bring a blend of technical skills, leadership, and execution to every project.
+              My work is centered on building efficient systems, improving processes, and delivering
+              measurable outcomes that support long-term growth.
+            </p>
+          </div>
+          <div class="hero-meta">
+            <p><strong>Email:</strong> name@email.com</p>
+            <p><strong>Location:</strong> City, State</p>
+            <p><strong>LinkedIn:</strong> linkedin.com/in/yourname</p>
+            <p><strong>GitHub:</strong> github.com/yourname</p>
+          </div>
+        </section>
+
+        <section id="experience" class="section-block">
+          <div class="section-header">
+            <p class="section-label">Experience</p>
+            <h3>Career Highlights</h3>
+          </div>
+
+          <article class="job card">
+            <div class="job-header">
+              <div>
+                <h4>Employer Name</h4>
+                <p class="job-title">Job Title</p>
+              </div>
+              <div class="job-meta">
+                <span>Month Year – Month Year</span>
+                <span>City, State</span>
+              </div>
+            </div>
+            <ul>
+              <li>Led cross-functional initiatives that improved operational efficiency and supported business goals.</li>
+              <li>Developed and delivered solutions that reduced process time, increased productivity, and improved customer experience.</li>
+              <li>Partnered with stakeholders to define requirements, implement improvements, and measure impact using clear performance metrics.</li>
+              <li>Documented processes and created scalable workflows that enabled smoother day-to-day operations.</li>
+            </ul>
+          </article>
+
+          <article class="job card">
+            <div class="job-header">
+              <div>
+                <h4>Employer Name</h4>
+                <p class="job-title">Previous Job Title</p>
+              </div>
+              <div class="job-meta">
+                <span>Month Year – Month Year</span>
+                <span>City, State</span>
+              </div>
+            </div>
+            <ul>
+              <li>Managed key responsibilities that supported team goals while maintaining a strong customer-focused approach.</li>
+              <li>Created and optimized systems, reports, or processes that improved quality, speed, and accountability.</li>
+              <li>Handled complex issues with a focus on data-driven decision-making and continuous improvement.</li>
+              <li>Collaborated effectively with internal teams to ensure alignment, clear communication, and successful execution.</li>
+            </ul>
+          </article>
+        </section>
+
+        <section id="projects" class="section-block">
+          <div class="section-header">
+            <p class="section-label">Projects</p>
+            <h3>Featured Work</h3>
+          </div>
+
+          <div class="projects-grid">
+            <article class="project card">
+              <h4>Project One</h4>
+              <p>
+                A concise project description highlighting the problem, the solution, and the impact.
+              </p>
+              <ul>
+                <li>Built a scalable tool or application to streamline a process.</li>
+                <li>Improved efficiency, accuracy, or usability for end users.</li>
+              </ul>
+            </article>
+
+            <article class="project card">
+              <h4>Project Two</h4>
+              <p>
+                Summarize the initiative, your role, and the value it delivered to the user or organization.
+              </p>
+              <ul>
+                <li>Designed and delivered a solution with measurable business value.</li>
+                <li>Collaborated across teams to create a polished, end-to-end result.</li>
+              </ul>
+            </article>
+
+            <article class="project card">
+              <h4>Project Three</h4>
+              <p>
+                Include a project that demonstrates technical depth, creativity, or leadership.
+              </p>
+              <ul>
+                <li>Implemented features that improved functionality and user experience.</li>
+                <li>Used data, testing, or process improvements to strengthen performance.</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer id="contact" class="footer">
+        <p>Available for opportunities and collaboration.</p>
+        <a href="mailto:name@email.com">name@email.com</a>
+      </footer>
+    </div>
+  </body>
 </html>
